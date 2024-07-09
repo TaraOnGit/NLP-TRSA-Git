@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Translation Page</title>
+    <style>
+    div {text-align: center;}
+    </style>
+</head>
+<body bgcolor="turquoise">
+<div>
+<form action="/perform_translation" method="post">
+    <h1 style="color:green">What do you want to translate?</h1>
+        <label>Enter Your Text Here</label><br>
+        <input type="text" name="txt"><br><br>
+        <label>Translate to Which Language?</label><br>
+        <select name="ToLang">
+          <option value="hi">Hindi</option>
+          <option value="te">Telugu</option>
+          <option value="ur">Urdu</option>
+        </select><br><br>
+        <input type="Submit" value="Translate">
+    </form>
+</div>
+</body>
+</html>
