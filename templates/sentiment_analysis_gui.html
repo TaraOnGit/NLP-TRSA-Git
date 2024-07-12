@@ -15,6 +15,9 @@
         <input type="text" name="txt"><br><br>
         <input type="Submit" value="Analyse Sentiment">
     </form>
+    {%if message%}
+    <p style="color:red, size:16">{{message}}</p>
+    {%endif%}
 </div>
 </body>
 </html>

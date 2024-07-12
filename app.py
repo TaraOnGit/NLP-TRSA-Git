@@ -53,7 +53,7 @@ def perform_translation():
     to_lang = request.form.get('ToLang')
     trans_obj = TranslateTo()
     response = trans_obj.translate_to(txt,to_lang)
-    return response
+    return render_template('translation_gui.html', message=response)
 
 @app.route('/sentiment_analysis')
 def sentiment_analysis():
@@ -63,7 +63,7 @@ def sentiment_analysis():
 def perform_sentiment_analysis():
     txt = request.form.get('txt')
     response = sa_obj.sentiment_analysis(txt)
-    return response
+    return render_template('sentiment_analysis_gui.html', message=response.upper())
 
 app.run(debug=True)
 
